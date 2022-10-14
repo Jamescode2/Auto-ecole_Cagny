@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
+/* general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #333;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    font-family: "Sansita", sans-serif;
+    font-weight: 400;
+}
+
+/* menu*/
+#menu {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    background-image: linear-gradient(black, #333, black);
+    padding: 20px;
+}
+
+.logo img {
+    height: 100px;
+    width: 200px;
+}
+
+.menu_li {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 250px;
+}
+
+.lien a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    color: #FF8ACC;
+    cursor: pointer;
+}
+
+.lien a:hover {
+    color: whitesmoke;
+}
+
+.formation a {
+    padding-bottom: 20px;
+
+}
+
+.formation:hover .dropdown {
+    top: 100px;
+    width: 250px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .6s;
+}
+
+.dropdown {
+    position: absolute;
+    top: 120px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 3px solid #808080;
+    background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
+    z-index: 1;
+}
+
+.dropdown a {
+    color: #FF8ACC;
+    padding: 10px 0 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    color: whitesmoke;
+    background-color: #FF8ACC;
+    transition: background-color 0.3s;
+}
+
+/* hamburger menu */
+.icon,
+.menu_mobile,
+.dropdown_mobile,
+.menu_mobile a {
+    display: none;
+}
+
+/*carrousel*/
+#carrousel {
+    width: 100%;
+    height: 650px;
+    position: relative;
+}
+
+.slide,
+.slide img {
+    width: 100%;
+    height: 100%;
+
+}
+
+#carrousel h2 {
+    color: #FF8ACC;
+}
+
+.titre {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.anim {
+    animation-name: anim;
+    animation-duration: 2s;
+}
+
+@keyframes anim {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*information*/
+#information {
+    width: 100%;
+    height: auto;
+}
+
+
+#information h2 {
+    color: #FF8ACC;
+}
+
+#information p {
+    color: whitesmoke;
+}
+
+.divider {
+    width: 70%;
+    height: 10px;
+    background: #FF8ACC;
+    margin: 10px auto 0;
+}
+
+.agence {
+    text-align: center;
+}
+
+.fb {
+    text-align: center;
+}
+
+.fb img {
+    opacity: 1;
+}
+
+.fb img:hover {
+    opacity: 0.7;
+}
+
+.form {
+    text-align: center;
+}
+
+
+/* service */
+#service {
+    background-color: #FF8ACC;
+    width: 100%;
+    height: 550px;
+    display: flex;
+}
+
+#service h2 {
+    color: #333;
+}
+
+#service p {
+    color: #333;
+    font-weight: bold;
+    padding: 0 100px;
+}
+
+.code {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.code .pass a {
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    color: whitesmoke;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.code .pass a:hover {
+    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+}
+
+.code .rousseau {
+    display: flex;
+    justify-content: space-around;
+}
+
+.code .rousseau a {
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    padding: 15px 55px;
+    color: whitesmoke;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.code .rousseau a:hover {
+    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+}
+
+.slider {
+    width: 50%;
+    height: 100%;
+}
+
+.slide2,
+.slide2 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* disponibilité */
+#horaire {
+    width: 100%;
+    height: auto;
+}
+
+#horaire h2 {
+    color: #FF8ACC;
+}
+
+#horaire p {
+    color: whitesmoke;
+}
+
+.disponibilite {
+    text-align: center;
+    padding: 0 250px;
+}
+
+.disponibilite h2 {
+    text-transform: uppercase;
+}
+
+/* disponibilité bloc */
+.bloc {
+    display: flex;
+    justify-content: space-evenly;
+    height: 400px;
+}
+
+/* disponibilité bloc 1 */
+.bloc>div {
+    align-self: center;
+    margin-bottom: 10px;
+
+}
+
+.bloc img {
+    height: 200px;
+    border: 1px #FF8ACC solid;
+}
+
+/* disponibilité bloc 2 */
+.bloc .entreprise {
+    background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
+    padding: 15px 15px;
+    text-align: center;
+    border: 1px #FF8ACC solid;
+}
+
+.bloc .entreprise a {
+    color: #FF8ACC;
+    text-decoration: none;
+}
+
+.bloc .entreprise a:hover {
+    color: #ff6ec0;
+}
+
+/* disponibilité bloc3 */
+.bloc .horaire {
+    background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
+    padding: 15px 15px;
+    border: 1px #FF8ACC solid;
+}
+
+.accordion {
+    background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 0;
+}
+
+.active,
+.accordion:hover {
+    background: linear-gradient(to bottom, #333 0%, #000 50%, #000 100%);
+}
+
+.accordion h2 {
+    display: inline-block;
+    padding-right: 18px;
+}
+
+.accordion:after {
+    content: '\02795';
+}
+
+.active:after {
+    content: "\2796";
+}
+
+.panel {
+    max-height: 0;
+    transition: max-height 0.8s ease-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #FF8ACC;
+    text-align: center;
+}
+
+.chevron-up {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+footer img {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+footer img:hover {
+    width: 38px;
+    height: 38px;
+    opacity: 0.8;
+}
+
+footer h3 {
+    margin: 0;
+}
+
+
+@media screen and (max-width:920px) {
+
+    .container {
+        width: fit-content;
+    }
+
+    /* menu*/
+    #menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo {
+        align-self: center;
+        padding: 10px 0;
+    }
+
+    .menu_li {
+        margin: 0;
+        padding: 10px 0;
+        border-top: 1px #FF8ACC solid;
+        border-bottom: 1px #FF8ACC solid;
+    }
+
+    .dropdown {
+        top: 185px;
+    }
+
+    .formation:hover .dropdown {
+        top: 165px;
+    }
+
+    /*information*/
+
+    .disponibilite {
+        padding: 0 30px;
+    }
+
+
+    /* service */
+    #service {
+        background-color: #FF8ACC;
+        width: 100%;
+        height: 1100px;
+        display: block;
+    }
+
+    .code {
+        width: 100%;
+        height: 40%;
+        text-align: center;
+    }
+
+    .slider {
+        width: 100%;
+        height: 60%;
+    }
+
+    /* disponibilité */
+    .bloc {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /* menu*/
+
+    .menu_li {
+        display: none;
+    }
+
+    /* hamburger menu */
+    .icon {
+        display: block;
+        border-top: 1px #FF8ACC solid;
+        border-bottom: 1px #FF8ACC solid;
+        font-size: 30px;
+        color: #FF8ACC;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu_mobile a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        color: #FF8ACC;
+        padding: 10px 0 10px 10px;
+        border-bottom: 1px solid #303030;
+    }
+
+    .menu_mobile .dropdown_mobile a {
+        padding-left: 15px;
+    }
+
+    .menu_mobile a:hover {
+        color: whitesmoke;
+        background-color: #FF8ACC;
+        transition: background-color 0.3s;
+    }
+
+    /* service */
+    #service {
+        height: 1500px;
+    }
+
+    .code .rousseau {
+        display: block;
+    }
+
+    .code .rousseau a {
+        margin: 10px;
+        display: block;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    /* service */
+    #service {
+        height: 1750px;
+    }
+}
