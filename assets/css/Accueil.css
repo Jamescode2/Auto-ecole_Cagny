@@ -21,6 +21,19 @@ h1 {
     font-weight: 400;
 }
 
+.h2bis {
+    display: inline-block;
+    padding-right: 18px;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #FF8ACC;
+
+}
+
 /* menu*/
 #menu {
     display: grid;
@@ -55,17 +68,20 @@ h1 {
     color: whitesmoke;
 }
 
-.formation a{
+.formation a {
     padding-bottom: 20px;
 
 }
+
 .formation:hover .dropdown {
     top: 100px;
     width: 250px;
     opacity: 1;
     visibility: visible;
     transition: all .6s;
+
 }
+
 .dropdown {
     position: absolute;
     top: 120px;
@@ -75,6 +91,7 @@ h1 {
     border-top: 3px solid #808080;
     background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
     z-index: 1;
+
 }
 
 .dropdown a {
@@ -122,6 +139,7 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
 .anim {
     animation-name: anim;
     animation-duration: 3s;
@@ -145,6 +163,7 @@ h1 {
 
 #information h2 {
     color: #FF8ACC;
+    text-align: center;
 }
 
 #information p {
@@ -166,6 +185,11 @@ h1 {
 .personnel {
     display: flex;
     justify-content: space-evenly;
+}
+
+.personnel div {
+    display: flex;
+    align-items: center;
 }
 
 .fb {
@@ -218,18 +242,15 @@ h1 {
 }
 
 .code .pass a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    background-color: #fc67fa;
     margin: 10px;
     padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
     text-decoration: none;
-}
+    box-shadow: 0 7px #999;
 
-.code .pass a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
 }
 
 .code .rousseau {
@@ -238,17 +259,26 @@ h1 {
 }
 
 .code .rousseau a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
-    padding: 15px 55px;
+    background-color: #fc67fa;
+    padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     text-decoration: none;
+    box-shadow: 0 7px #999;
+
 }
 
+.code .pass a:hover,
 .code .rousseau a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+    background-color: #BB377D;
 }
+
+.code .pass a:active,
+.code .rousseau a:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 .slider {
     width: 50%;
@@ -260,6 +290,7 @@ h1 {
     width: 100%;
     height: 100%;
 }
+
 /* disponibilité */
 #horaire {
     width: 100%;
@@ -317,6 +348,7 @@ h1 {
 
 .bloc .entreprise a:hover {
     color: #ff6ec0;
+    text-decoration: underline;
 }
 
 /* disponibilité bloc3 */
@@ -339,10 +371,6 @@ h1 {
     background: linear-gradient(to bottom, #333 0%, #000 50%, #000 100%);
 }
 
-.accordion h2 {
-    display: inline-block;
-    padding-right: 18px;
-}
 
 .accordion:after {
     content: '\02795';
@@ -394,9 +422,10 @@ footer h3 {
 
 @media screen and (max-width:920px) {
 
-    .container{
-        width:fit-content;
+    .container {
+        width: fit-content;
     }
+
     /* menu*/
     #menu {
         display: flex;
@@ -426,18 +455,17 @@ footer h3 {
 
     /*information*/
 
-    .presentation, .disponibilite {
+    .presentation,
+    .disponibilite {
         padding: 0 30px;
     }
 
-    .info {
-        display: block;
-    }
     .info,
     .personnel {
-        display: block;
-        text-align: center;
+       flex-direction: column;
+       align-items: center;
     }
+
     /* service */
     #service {
         background-color: #FF8ACC;
@@ -456,7 +484,7 @@ footer h3 {
         width: 100%;
         height: 60%;
     }
-    
+
     /* disponibilité */
     .bloc {
         display: flex;
@@ -465,8 +493,8 @@ footer h3 {
     }
 }
 
-@media screen and (max-width:600px) {
 
+@media screen and (max-width:600px) {
     /* menu*/
 
     .menu_li {
@@ -520,8 +548,9 @@ footer h3 {
 }
 
 @media screen and (max-width:450px) {
-     /* service */
-     #service {
+
+    /* service */
+    #service {
         height: 1750px;
     }
 }

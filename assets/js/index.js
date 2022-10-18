@@ -24,7 +24,7 @@ function showSlides2() {
   slideIndex++;
   if (slideIndex > slides2.length) { slideIndex = 1 }
   slides2[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides2, 2000);
+  setTimeout(showSlides2, 3000);
 }
 
 // accordion horaire 2 possibilité

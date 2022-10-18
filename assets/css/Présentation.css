@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+
 /* general */
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -11,12 +12,26 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-color: #333;
 }
+
 h1 {
     color: whitesmoke;
     font-size: 36px;
     letter-spacing: 1.5px;
     font-family: "Sansita", sans-serif;
     font-weight: 400;
+}
+.h2bis
+{
+    display: inline-block;
+    padding-right: 18px;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #FF8ACC;
+
 }
 /* menu*/
 #menu {
@@ -52,17 +67,20 @@ h1 {
     color: whitesmoke;
 }
 
-.formation a{
+.formation a {
     padding-bottom: 20px;
 
 }
+
 .formation:hover .dropdown {
     top: 100px;
     width: 250px;
     opacity: 1;
     visibility: visible;
     transition: all .6s;
+
 }
+
 .dropdown {
     position: absolute;
     top: 120px;
@@ -72,6 +90,7 @@ h1 {
     border-top: 3px solid #808080;
     background: linear-gradient(to bottom, #000 0%, #000 50%, #333 100%);
     z-index: 1;
+
 }
 
 .dropdown a {
@@ -94,6 +113,7 @@ h1 {
 .menu_mobile a {
     display: none;
 }
+
 /*carrousel*/
 #carrousel {
     width: 100%;
@@ -118,9 +138,10 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
 .anim {
     animation-name: anim;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 @keyframes anim {
@@ -134,10 +155,11 @@ h1 {
 }
 
 /*information*/
-#information{
+#information {
     width: 100%;
     height: auto;
 }
+
 #information h2 {
     color: #FF8ACC;
 }
@@ -213,18 +235,15 @@ h1 {
 }
 
 .code .pass a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    background-color: #fc67fa;
     margin: 10px;
     padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
     text-decoration: none;
-}
+    box-shadow: 0 7px #999;
 
-.code .pass a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
 }
 
 .code .rousseau {
@@ -233,17 +252,24 @@ h1 {
 }
 
 .code .rousseau a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
-    padding: 15px 55px;
+    background-color: #fc67fa;
+    padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     text-decoration: none;
+    box-shadow: 0 7px #999;
+
 }
 
-.code .rousseau a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+.code .pass a:hover, .code .rousseau a:hover {
+    background-color: #BB377D;
 }
+
+.code .pass a:active, .code .rousseau a:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 .slider {
     width: 50%;
@@ -255,7 +281,6 @@ h1 {
     width: 100%;
     height: 100%;
 }
-
 
 /* disponibilité */
 #horaire {
@@ -314,6 +339,7 @@ h1 {
 
 .bloc .entreprise a:hover {
     color: #ff6ec0;
+    text-decoration: underline;
 }
 
 /* disponibilité bloc3 */
@@ -334,11 +360,6 @@ h1 {
 .active,
 .accordion:hover {
     background: linear-gradient(to bottom, #333 0%, #000 50%, #000 100%);
-}
-
-.accordion h2 {
-    display: inline-block;
-    padding-right: 18px;
 }
 
 .accordion:after {
@@ -391,9 +412,10 @@ footer h3 {
 
 @media screen and (max-width:920px) {
 
-    .container{
-        width:fit-content;
+    .container {
+        width: fit-content;
     }
+
     /* menu*/
     #menu {
         display: flex;
@@ -423,18 +445,17 @@ footer h3 {
 
     /*information*/
 
-    .presentation, .disponibilite {
+    .presentation,
+    .disponibilite {
         padding: 0 30px;
     }
 
-    .info {
-        display: block;
-    }
     .info,
     .personnel {
         display: block;
         text-align: center;
     }
+
     /* service */
     #service {
         background-color: #FF8ACC;
@@ -453,7 +474,7 @@ footer h3 {
         width: 100%;
         height: 60%;
     }
-    
+
     /* disponibilité */
     .bloc {
         display: flex;
@@ -462,8 +483,8 @@ footer h3 {
     }
 }
 
-@media screen and (max-width:600px) {
 
+@media screen and (max-width:600px) {
     /* menu*/
 
     .menu_li {

@@ -20,7 +20,19 @@ h1 {
     font-family: "Sansita", sans-serif;
     font-weight: 400;
 }
+.h2bis
+{
+    display: inline-block;
+    padding-right: 18px;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #FF8ACC;
 
+}
 /* menu*/
 #menu {
     display: grid;
@@ -231,18 +243,14 @@ h1 {
 }
 
 .code .pass a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    background-color: #fc67fa;
     margin: 10px;
     padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
     text-decoration: none;
-}
-
-.code .pass a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+    box-shadow: 0 7px #999;
 }
 
 .code .rousseau {
@@ -251,16 +259,21 @@ h1 {
 }
 
 .code .rousseau a {
-    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
-    padding: 15px 55px;
+    background-color: #fc67fa;
+    padding: 15px 45px;
     color: whitesmoke;
-    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     text-decoration: none;
+    box-shadow: 0 7px #999;
 }
 
-.code .rousseau a:hover {
-    background-image: linear-gradient(to right, #ffdde1 0%, #ee9ca7 51%, #ffdde1 100%);
+.code .pass a:hover, .code .rousseau a:hover {
+    background-color: #BB377D;
+}
+
+.code .pass a:active, .code .rousseau a:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .slider {
@@ -332,6 +345,8 @@ h1 {
 
 .bloc .entreprise a:hover {
     color: #ff6ec0;
+    text-decoration: underline;
+
 }
 
 /* disponibilité bloc3 */
@@ -352,11 +367,6 @@ h1 {
 .active,
 .accordion:hover {
     background: linear-gradient(to bottom, #333 0%, #000 50%, #000 100%);
-}
-
-.accordion h2 {
-    display: inline-block;
-    padding-right: 18px;
 }
 
 .accordion:after {
