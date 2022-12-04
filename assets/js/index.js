@@ -47,13 +47,11 @@ for (i = 0; i < acc.length; i++) {
 // chevron-up smooth
 const chevron = document.querySelector(".chevron-up");
 chevron.addEventListener('click', () => {
-
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth"
   })
-
 })
 
 function affiche(x, y) {
