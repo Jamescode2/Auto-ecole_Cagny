@@ -1,5 +1,6 @@
 // slider 2 possibilité
 let slideIndex = 0;
+let slideIndex2 = 0;
 showSlides();
 showSlides2();
 
@@ -21,9 +22,9 @@ function showSlides2() {
   for (i = 0; i < slides2.length; i++) {
     slides2[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides2.length) { slideIndex = 1 }
-  slides2[slideIndex - 1].style.display = "block";
+  slideIndex2++;
+  if (slideIndex2 > slides2.length) { slideIndex2 = 1 }
+  slides2[slideIndex2 - 1].style.display = "block";
   setTimeout(showSlides2, 3000);
 }
 
@@ -55,7 +56,7 @@ chevron.addEventListener('click', () => {
 
 })
 
-function affiche(x,y) {
+function affiche(x, y) {
   x.addEventListener('click', () => {
 
     if (y.style.display === "block") {
@@ -63,7 +64,7 @@ function affiche(x,y) {
     } else {
       y.style.display = "block";
     }
-  
+
   })
 }
 
@@ -76,11 +77,11 @@ let menu = document.querySelector(".menu_mobile");
 let formation_mobile = document.querySelector(".dropdown_formation");
 let dropdown_mobile = document.querySelector(".dropdown_mobile");
 // clique lien formation : affiche sous menu dropdown
-affiche(formation,dropdown);
+affiche(formation, dropdown);
 // clique burger : affiche menu-mobile
-affiche(burger,menu);
+affiche(burger, menu);
 // clique lien menu : affiche sous menu dropdown_mobile
-affiche(formation_mobile,dropdown_mobile);
+affiche(formation_mobile, dropdown_mobile);
 
 
 
